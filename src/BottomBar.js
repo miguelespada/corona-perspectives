@@ -68,7 +68,7 @@ APP.BottomBar = function( model ) {
 				'<div id="menu">',
 					'<ul id="mainNav">',
 						// '<li class="active"><span data-slug="matches">Home</span></li>',
-						'<li><span data-slug="intro">Home</span></li>',
+						'<li><span data-slug="intro"  onclick="location.href=\'../home/index.html\'">Home</span></li>',
 						'<li><span data-slug="makingof">Making Of</span></li>',
 						'<li><span data-slug="about">About</span></li>',
 					'</ul>',

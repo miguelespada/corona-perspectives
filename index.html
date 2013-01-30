@@ -27,7 +27,7 @@
 				</div>
 			</section>
 
-			<div id="logo" ></div>
+			<a id="logo" href="../home/index.html"></a>
 			<div id="iconos-social">
 				<a id="fullscreen" href="#"></a>
 				<a id="soundVolume" href="#"></a>
@@ -112,6 +112,8 @@
 
 		<script>
   		 		// put all your jQuery goodness in here.
+  				// Handler for .ready() called.
+
 
 			if ( ! Detector.webgl ) 
 				Detector.addGetWebGLMessage();
@@ -161,9 +163,12 @@
 			var audio = document.createElement("audio");
 
 			// kick it out!
-			init();
-			onWindowResize();
-			animate();
+  			 $(document).ready(function() {
+				init();
+				onWindowResize();
+				animate();
+			});
+
 			function init() {
 
 				camera = new THREE.PerspectiveCamera( 60, $(window).width() / ( $(window).height() - 25 ), 1, 100 );
