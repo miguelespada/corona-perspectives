@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Corona Perspectives</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta property="og:description" content="Explore three of the ATP's most important matches in 3D and from any perspective. Interacting with ever set, game, and point. [ Google Chrome recommended ]" /> 
+	<meta property="og:url" content="http://www.coronaperspectives.com" />
+	<meta property="og:image" content="http://www.coronaperspectives.com/data/print-web01.jpg" />
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+	<body>		
+
+		<!-- <div id="intro"><span id="exitIntro">Exit intro</span></div> -->
+
+		<div id="sections">
+
+			<section id="matches">
+				<div id="player-wrap">
+					<div id="player"></div>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div id="closeVideo">&#215</div>
+				</div>
+			</section>
+
+			<div id="logo"></div>
+			<div id="iconos-social">
+				<a id="fullscreen" href="#"></a>
+				<a id="soundVolume" href="#"></a>
+				<a id="twitter" target="_blank" href="http://twitter.com/share?text=Explore+three+of+the+ATP's+most+important+matches+in+3D+and+from+any+perspective.+http:%2F%2Fwww.coronaperspectives.com+%23coronaperspectives"></a>
+				<a id="facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=http:%2F%2Fwww.coronaperspectives.com"></a>
+				<a id="pinterest" target="_blank" href="http://pinterest.com/pinthis?url=http:%2F%2Fwww.coronaperspectives.com"></a>
+ 				<a id="googleplus" target="_blank" href="https://plus.google.com/share?url=http:%2F%2Fwww.coronaperspectives.com"></a>
+ 			</div>
+
+			<div id="makingof">
+				<div>
+					<h1>MAKING OF</h1>
+					<p>Corona Perspective is the result of a project that was in the making for an entire year that all started with an idea from JWT. Espada y Santa Cruz was responsible for the technical part of the project, implementing new technologies such as WEBGL, HTML5, and 3D rendering in real-time.</p>
+					<p>It’s an experimental project that’s not only a very useful interactive tool for fans, players and trainers, but, above all, a tribute to tennis.</p>
+				</div>
+				<div>
+					<div id="playerMof-wrap"><div id="playerMof"></div></div>
+				</div>
+			</div>	
+
+			<div id="about">
+				<div>
+					<h1>ABOUT</h1>
+					<p>Tennis.</p>
+					<p>It’s given us matches that have touched us like great works of art.</p>
+					<p>No matter if it’s being watched on the couch, or from the stands.</p>
+					<p>But, what if it could be seen from any point of view? Even from the inside of the match? Corona Extra, ATP sponsor, has made this happen.</p>
+					<p>From a JWT’s idea, software was developed by espadaysantacruz studio, which tracked the tennis ball’s trajectory of three of the most important ATP final matches. It allows the viewer to appreciate the match from never before seen perspectives.</p>
+					<p>A 360º and three-dimensional view of matches, interacting with each service, point or rally.</p>
+					<p>An astonishing tribute to tennis.</p>
+				</div>
+				<div id="steps">
+					<div id="steps1">
+						<h1>STEP 1</h1>
+						<img src="images/paso-1.png">
+					</div>
+					<div id="steps2">
+						<h1>STEP 2</h1>
+						<img src="images/paso-2.png">
+					</div>
+					<div id="steps3">
+						<h1>STEP 3</h1>
+						<img src="images/paso-3.png">
+					</div>
+					<div id="steps4">
+						<h1>STEP 4</h1>
+						<img src="images/paso-4.png" usemap="#imagemap">
+						<map name="imagemap" id="imagemap">
+							<area shape="rect" coords="33,268,113,377" href="images/print-web01.jpg">
+							<area shape="rect" coords="126,268,205,377" href="images/print-web02.jpg">
+							<area shape="rect" coords="221,268,298,377" href="images/print-web03.jpg">
+						</map>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="lib/jquery-1.8.0.min.js"></script>
+		<script src="lib/jquery.easing.1.3.js"></script>
+		<script src="lib/jquery.transform-0.9.4.min.js"></script>
+		<script src="lib/jquery.fullscreen-min.js"></script>
+		<script src="lib/three.js"></script>
+
+		<!-- <script src='js/tween.js'></script> -->
+		<script src="js/Detector.js"></script>
+		<script src="js/Stats.js"></script>
+		<script src="js/dat.gui.js"></script>
+
+		<script src="src/App.js"></script>
+		<script src="src/Utils.js"></script>
+		<script src="src/Data.js"></script>
+		<script src="src/Model.js"></script>
+		<script src="src/SliderZoom.js"></script>
+		<script src="src/Slider.js"></script>
+		<script src="src/BottomBar.js"></script>
+		<script src="src/Score.js"></script>
+		<script src="src/ViewGL.js"></script>		
+		<script src="src/ViewLineDashed.js"></script>		
+		<script src="src/ViewInteractive.js"></script>
+		<script src="src/HoverControls.js"></script>
+		<script src="src/CameraMouseControl.js"></script>
+
+		<script>
+			$(document).ready(function() {
+  		 		// put all your jQuery goodness in here.
+
+			if ( ! Detector.webgl ) 
+				Detector.addGetWebGLMessage();
+
+			// see: buildSliders
+			var sliders = {};	
+			sliders.each = function( fn ) {
+				for ( prop in this )	
+					if ( typeof this[ prop ] === 'object' )
+						fn( this[ prop ] );
+			};
+
+			var cameraHover, 
+				cameraMouseControl,
+
+			// stats, gui,			
+
+			// video (null needed in safari)
+				player = null,
+				playerMof = null,	
+
+			// models
+				camera,
+				model,
+
+			// views
+				layer3DGL,
+				layerDashed,
+				layer3DInteractive,
+				bottomBar,
+
+			// inactivity
+				timeout,
+				isHidden = false,
+			
+				DEFAULT_MATCH  = 'fn',
+				INACTIVITY_TIME = 2000,		// ms to trigger hotspots atenuation
+				VOLUME_BACKGROUND = 0.7,
+
+			// navigation state	
+				// currentLevel   = 'intro',	// intro, sections
+				currentSection = null,		// matches, about, makingof
+				xhr;						// ajax request for matches, needed to abort loading
+
+			var renderIsActive = false;	// flag to avoid/allow rendering... TODO: implement onAnimationFrame?
+
+			var audio = document.createElement("audio");
+
+			// kick it out!
+			init();
+			onWindowResize();
+			animate();
+			 });
+			function init() {
+
+				camera = new THREE.PerspectiveCamera( 60, $(window).width() / ( $(window).height() - 25 ), 1, 100 );
+				// camera.position.z = 30;
+				
+				cameraHover = new APP.HoverControls( camera );			// 'decorator' to add hover controls to camera
+				cameraHover.steps = 10;
+				cameraHover.yfactor = 0.8;
+				cameraHover.panAngle = Math.PI / 2;
+				cameraHover.update(true);
+				
+				cameraMouseControl = new APP.CameraMouseControl( cameraHover );	// 'decorator' to add mouse control functionality
+
+				// -----------------
+				// init data model
+				// -----------------				
+
+				model = new APP.Model();				
+
+				// ------------
+				// init views
+				// ------------
+
+				layer3DGL = new APP.ViewGL( model );
+				layerDashed = new APP.ViewLineDashed( model );
+				layer3DInteractive = new APP.ViewInteractive( model );	
+				bottomBar = new APP.BottomBar( model );	// view-controller
+				score = new APP.Score( model );
+
+				// controls
+				buildSliders();	
+
+				// wait untill video API is loaded! // see: onYouTubeIframeAPIReady
+				/*layer3DInteractive.on( 'spotClick', function( spot ) {
+
+					model.selectHotspot( spot );
+					render();
+				});*/			
+					
+				// load yt video player api when document ready
+				// TODO: preload all resources before launching the app
+				$(function() { 
+					loadPlayerAPI(); 
+				});
+
+				bottomBar.on( 'focusChange', function( node ) {
+					model.selectNode( node );	// should we do this inside BottomBar directly?
+					render();
+				});			
+
+				// browser events:
+				$(window).on( 'resize', onWindowResize );		
+
+				// mouse events:
+				// navigation
+				$( 'ul#mainNav' ).on( 'click', onMainNavClick );
+				$( 'ul#matchNav' ).on( 'click', onMatchNavClick );	
+				// $('#exitIntro').on( 'click', function() { navigateToLevel( 'sections' ); } );
+				// $('#logo').on( 'click', function() { navigateToLevel( 'intro' ); } );
+				// popup images
+				$('#steps4 area').on( 'click', onImageAreaClick );
+				// selecting/dragging text upwards would scroll body. avoid this.
+				$('#about, #makingof, #score, #logo').on( 'mousedown', function( event ) {					
+					event.preventDefault();
+					return false;
+				});
+				// fullscreen
+				$('#fullscreen').on('click', function(event){
+
+					var isFullscreen = $(document).fullScreen();
+
+					if ( ! isFullscreen ) {
+						$(document).fullScreen(true);
+						isFullscreen = true;
+					}
+					else {
+						$(document).fullScreen(false);
+						isFullscreen = false;
+					}
+				});
+				// sound
+				$('#soundVolume').on('click', function(event){
+
+					if ( audio.volume === 0 ) {
+						audio.volume = VOLUME_BACKGROUND;
+					} else {
+						audio.volume = 0;
+					}
+				} )				
+
+				// testing...
+				// this fix an anoying problem with the sroll in chrome (it remembers the las scroll and messes it all when reloading)
+				// hay que esperar a que se cargue todo para lanzar la app				
+				$(window).load( function() {
+					// $( 'body,html' ).scrollTop( 0 );
+					$('body').css( 'visibility', 'visible' );
+
+					// sound
+					if ( audio != null && audio.canPlayType && audio.canPlayType("audio/mpeg") ) {
+	    				audio.src = "audio/Ambient.mp3";
+	    				audio.addEventListener( "canplaythrough", function() {
+	    					audio.play();
+	    					audio.loop = true;
+	    					audio.volume = VOLUME_BACKGROUND;
+	    				});
+	    			}
+
+	    			//////////////////////////////
+	    			// lauch visualization
+	    			//////////////////////////////
+	    			initVisualisation();
+				});
+			}
+
+			function onWindowResize() {
+
+				$('#popup').remove();
+				
+				var height = $(window).height(),
+					width = $(window).width();
+
+				// update sections vertical position				
+				// $('#sections').css( 'top', height );
+
+				// update panels second div
+				$('#makingof > div:nth-child(2)').css( 'width', width - 320 );
+				$('#about > div:nth-child(2)').css( 'width', width - 320 );
+				
+				// update scroll value
+				// switch( currentLevel ) {
+				// case 'intro':
+				// 	$( 'body,html' ).scrollTop( 0 );
+				// 	break;
+				// case 'sections':
+				// 	$( 'body,html' ).scrollTop( width );
+				// 	break;
+				// }
+
+				// 3d stuff
+				camera.aspect = width / ( height - 25 );
+				camera.updateProjectionMatrix();
+				render();
+
+			}
+
+			// note: we can only click nav when we are in level 'sections'
+			function onMainNavClick( event ) {
+
+				var slug = $(event.target).attr( 'data-slug' );
+
+				// update main nav dom
+				$( '#mainNav .active' ).removeClass( 'active' );
+
+				switch( slug ) {
+				// case 'intro':
+				// 	navigateToLevel( slug );
+				// 	break;
+				case 'makingof':
+				case 'about':
+					navigateToSection( slug );
+					$( event.target ).parent().addClass( 'active' );
+					break;
+				}
+
+			}
+
+			function onMatchNavClick( event ) {	
+
+				$( '#mainNav .active' ).removeClass( 'active' );
+
+				// refresh interface
+				bottomBar.hideTimeline();
+				renderIsActive = false;
+				cameraMouseControl.disable();
+
+				// identify match to load
+				var matchId = $( event.target ).attr( 'data-id' );
+				
+				navigateToSection( 'matches', matchId );
+
+			}
+
+			/*function navigateToLevel( targetLevel ) {
+
+				$('#popup').remove();
+				destroyPlayer();
+
+				var scrollTarget, onScrollComplete;
+
+				if ( targetLevel === currentLevel )
+					return;
+
+				// enter target section
+				switch( targetLevel ) {					
+				case 'intro':
+					hidePanels();
+					deactivateVisualisation();
+					onScrollComplete = activateIntro;					
+					scrollTarget = 0;
+					break;
+				case 'sections':
+					deactivateIntro();
+					onScrollComplete = function() {
+						if ( currentSection === null ) {
+							initVisualisation();
+						} else {
+							activateVisualisation();
+						}
+						currentSection = 'matches';
+					};
+					scrollTarget = $('#sections').height();
+					break;
+				}
+
+				// see: http://stackoverflow.com/questions/8149155/animate-scrolltop-not-working-in-firefox
+				$( 'body' ).animate( {
+					scrollTop: scrollTarget
+				}, { 
+					duration: 500,
+					easing: 'easeInOutQuart',
+					complete: onScrollComplete
+				} );
+
+				// update state
+				currentLevel = targetLevel;
+				
+			}*/
+
+			function navigateToSection( targetSection, matchId ) {
+
+				// discard if same as current
+				if ( !matchId  &&  currentSection === targetSection )
+					return;
+
+				$('#popup').remove();
+				destroyPlayer();
+
+				var	onPanelsHidden = function() {
+
+					if ( !matchId )
+						return;
+
+					if( matchId === model.getDataTree().data.id ) {
+						activateVisualisation();
+						return;
+					}
+
+					loadMatch( matchId, function( data ) {
+
+						// refresh model data tree
+						model.setData( data );
+						
+						// keep current slider values...
+						sliders ['rotation'].apply();
+						sliders ['field'].apply();
+						sliders ['particles'].apply();
+						sliders ['trajectories'].apply();
+						sliders ['heatmap'].apply();
+						sliders ['cameraZoom'].apply();
+					    // ... except colors, we load from data			    
+					    var p1 = data.playerColors[ 0 ],							// color values
+					    	p2 = data.playerColors[ 1 ],
+					    	color1 = new THREE.Color().setHSV( p1.h, p1.s, p1.v ),	// color objects
+							color2 = new THREE.Color().setHSV( p2.h, p2.s, p2.v );
+
+					    // update slider
+						sliders[ 'player1' ].setPercent( p1.h * 100 );
+						sliders[ 'player2' ].setPercent( p2.h * 100 );
+						// override color setted by slider (we do this in order to keep saturation and value from loaded colors)		
+						model.setPlayerColor( 0, color1 );
+						model.setPlayerColor( 1, color2 );
+
+						//
+						activateVisualisation();
+					});
+				}
+
+				// hide current panel (if any) and load requested match (if any)
+				hidePanels( onPanelsHidden );				
+
+				// show target pannel (if any)
+				if ( targetSection === 'makingof'
+				|| targetSection === 'about' ) {					
+
+					var $targetPanel = $( '#' + targetSection );
+
+					// destroyPlayer();
+					deactivateVisualisation();
+
+					// hide on click outside panels
+					$('#matches').off( 'click', onPanelClickOut );
+					$('#matches').on( 'click', onPanelClickOut );
+
+					$targetPanel.animate( {
+						bottom: 0 
+					}, { 
+						duration: 500,
+						easing: 'easeInOutQuart',
+						complete: null
+					} );
+				}
+
+				// update current section
+				currentSection = targetSection;
+
+			}
+
+			function onPanelClickOut( event ) {
+
+				var $target = $(event.target);
+
+				// if ( $target.is( '#logo' )
+				// || $target.is( '#mainNav span' ) 
+				// || $target.is( '#matchNav span' ) ) {
+				// }
+				// else {					
+				hidePanels( activateVisualisation );
+				currentSection = 'matches';								
+				// }
+
+				$(this).off( 'click', onPanelClickOut );
+
+			}
+
+			// load default match the first time visualisation is visited
+			function initVisualisation() {
+
+				loadMatch( DEFAULT_MATCH, onMatchLoaded );
+
+				bottomBar.highlightMatch( DEFAULT_MATCH );
+
+				function onMatchLoaded( data ) {
+
+					// refresh model data tree
+					model.setData( data );
+
+					// color values
+					var p1 = data.playerColors[ 0 ],							
+				    	p2 = data.playerColors[ 1 ],
+				    // color objects
+				    	color1 = new THREE.Color().setHSV( p1.h, p1.s, p1.v ),	
+						color2 = new THREE.Color().setHSV( p2.h, p2.s, p2.v );
+					
+					// apply defaults
+					sliders ['rotation'].reset();
+					sliders ['field'].reset();
+					sliders ['particles'].reset();
+					sliders ['trajectories'].reset();
+					sliders ['heatmap'].reset();
+					sliders ['cameraZoom'].reset();
+				    // update color sliders
+					sliders[ 'player1' ].setPercent( p1.h * 100 );
+					sliders[ 'player2' ].setPercent( p2.h * 100 );
+					// override color setted by slider (we do this in order to keep saturation and value from loaded colors)		
+					model.setPlayerColor( 0, color1 );
+					model.setPlayerColor( 1, color2 );
+
+					activateVisualisation();				
+				};		
+
+			}
+
+			function activateVisualisation() {
+
+				bottomBar.showTimeline();
+				layer3DInteractive.enable();
+				cameraMouseControl.enable();
+				score.enable();
+				sliders[ 'cameraZoom' ].enable();
+				renderIsActive = true;	
+
+				activateInactivityCheck();
+
+				audio.play();
+
+			}
+
+			function deactivateVisualisation() {
+
+				deactivateInactivityCheck();
+
+				bottomBar.hideTimeline();
+				layer3DInteractive.disable();
+				cameraMouseControl.disable();
+				score.disable();
+				sliders[ 'cameraZoom' ].disable();
+				renderIsActive = false;
+
+				audio.pause();
+
+			}
+
+			function hidePanels( onComplete ) {
+
+				if ( currentSection === 'makingof' 
+				|| currentSection === 'about' ) {
+
+					playerMof.stopVideo();
+
+					var $currentPanel = $( '#' + currentSection );
+
+					$currentPanel.animate( {
+						bottom: -$currentPanel.height()
+					}, { 
+						duration: 500,
+						easing: 'easeInOutQuart',
+						complete: onComplete
+					} );
+
+					$( '#mainNav .active' ).removeClass( 'active' );
+				}
+				else {
+
+					if ( onComplete ) {
+						onComplete();
+					}
+				}
+
+			}
+
+			function loadMatch( matchId, onComplete ) {
+
+				var url = 'data/' + matchId + '.json';
+
+				// place preloader (TODO: solucionar la precarga de todas las imagenes al iniciar la carga de la página)
+				// esto se consegue poniendo todas las images en el dom y llamando a $.load()
+				var $preloader = $( '<div id="preloader"><span>LOADING MATCH</span></div>' );
+
+				$('<img />')
+			    .attr('src', 'css/preloader.gif')
+			    .load( function( data ) {
+
+			        $preloader.prepend( $(this) );
+			        $( 'section#matches' ).append( $preloader );						
+
+					// load data
+					xhr = $.getJSON( url, function( data ) {
+
+						if ( onComplete )
+							onComplete( data );
+
+						// remove preloader
+						$preloader.remove();
+					});	
+			    });		
+
+			}
+
+			function abortLoadMatch() {
+
+				if ( xhr ) xhr.abort();
+
+			}
+
+			function activateIntro() {
+
+				// ....
+
+			}
+
+			function deactivateIntro() {
+
+				// ....
+
+			}
+
+			// show popup
+			function onImageAreaClick( event ) {
+
+				// destroy current popup (if any)
+				var $currentPopup = $('#popup');				
+				if ( $currentPopup.length > 0 )
+					$currentPopup.remove();
+
+				// calculate coords
+				var imgPosition = $('#steps4 img').position(),					
+					areaCoords  = $(event.target).attr('coords').split(','),
+					totalOffset = {
+						left : (imgPosition.left + parseInt( areaCoords[0] )) - 305,
+						top  : (imgPosition.top + parseInt( areaCoords[1] )) - 435
+					};
+
+				// append new popup	
+				$('<img/>')
+				.attr({
+					'src' : $(location).attr('href') + $(event.target).attr( 'href' ),
+					'id'  : 'popup'
+				})
+				.css({
+					top  : totalOffset.top,
+					left : totalOffset.left
+				})
+				.on( 'click', function() { $('#popup').remove(); } )
+				.appendTo( $('#steps4') );
+				
+				//
+				event.preventDefault();
+				return;
+
+			}
+
+			function activateInactivityCheck() {
+
+				deactivateInactivityCheck();
+			    $(document).on( 'mousemove', checkMouseInactivity );
+
+			}
+
+			function deactivateInactivityCheck() {
+
+				$(document).off( 'mousemove', checkMouseInactivity );
+				if ( timeout ) clearTimeout( timeout );
+
+			}
+
+			function checkMouseInactivity( event ) {
+
+				if ( timeout )
+		            clearTimeout( timeout );
+
+		        timeout = setTimeout( function() {			            
+		            if ( !isHidden ) {
+		            	layer3DInteractive.disable();
+		                layer3DGL.hideHotspots();
+		                isHidden = true;
+		            }			            
+		        }, INACTIVITY_TIME );
+
+		        if ( isHidden ) {
+		        	layer3DInteractive.enable();
+		        	layer3DGL.showHotspots();
+		            isHidden = false;
+		        }
+
+			}
+
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				// TODO: implement states?
+				// if a video is playing and we are in matches section
+				if ( ! renderIsActive )
+					return;
+
+				if ( cameraHover.update() ) { 
+					render();
+				}
+
+				layerDashed.render( camera );
+
+			}
+			
+			function render() {
+
+				layer3DGL.render( camera );
+				layer3DInteractive.render( camera );
+
+				// stats.update();
+
+			}
+
+			function buildSliders() {
+
+				var rotation = bottomBar.addSlider( {
+					label    : 'Rotation',
+					value    : .4,	// default value!
+					onChange : updateCameraRotation
+				} );
+
+				var player2 = bottomBar.addSlider( {
+					label    : 'Player 2',
+					value    : 0.92,
+					isColor  : true,
+					onChange : updateColorPlayer2
+				} );
+
+				var player1 = bottomBar.addSlider( {
+					label    : 'Player 1',
+					value    : 0.22,
+					isColor  : true,
+					onChange : updateColorPlayer1
+				} );				
+
+				var field = bottomBar.addSlider( {
+					label    : 'Tennis Court',
+					value    : 0.5,
+					onChange : updateCourtOpacity
+				} );
+
+				var particles = bottomBar.addSlider( {
+					label    : 'Particles',
+					value    : 0,
+					onChange : updateParticlesOpacity
+				} );
+
+				var trajectories = bottomBar.addSlider( {
+					label    : 'Trajectories',
+					value    : 1.0,
+					onChange : updateTrajectoriesOpacity
+				} );
+
+				var heatmap = bottomBar.addSlider( {
+					label    : 'Heatmap',
+					value    : 0,
+					onChange : updateHeatmapThreshold
+				} );
+
+				// this one goes outside the bottomBar
+				var cameraZoom = new APP.SliderZoom();
+				cameraZoom.$domElement.appendTo( $('section#matches') );
+				cameraZoom.onChange( updateCameraZoom );
+				cameraZoom.defaultPercent = 40;
+				// ...testing
+
+				// ----
+				// store sliders (we need this in order to set default values when model.dataTree changes)
+				sliders ['rotation']     = rotation;
+				sliders ['player2']      = player2;
+				sliders ['player1']      = player1;
+				sliders ['field']        = field;
+				sliders ['particles']    = particles;
+				sliders ['trajectories'] = trajectories;
+				sliders ['heatmap']      = heatmap;
+				sliders ['cameraZoom']   = cameraZoom;
+
+				////////////////////////////// hack
+				// Wait untill fonts are loaded and refresh sliders width
+				$(window).on('load', function() {
+
+					var count = 0;	
+
+					// bug? inexplicablemente necesitamos ejecutar la funcion de intervalo varias veces ?????
+					// creo que esto tiene que ver con los espacios en los nombres (si se eliminan los espacios no hace falta el intervalo)
+					var interval = setInterval( function() {	
+
+						sliders.each( function( slider ) { slider.refreshWidth(); } );
+
+						if ( count == 10 )
+							clearInterval( interval );
+
+						count++;
+
+					}, 100 );			
+					
+				} );
+				//////////////////////////////
+				// ----
+				// callbacks (value is [0.0..1.0])
+
+				function updateCameraRotation( value ) {
+
+					cameraHover.autoRotateScale = value;
+				}
+
+				function updateColorPlayer1( value ) {
+
+					value = (value < 1) ? value : 0.999;	// clamp
+
+					var color = new THREE.Color();
+					color.setHSV( value, 1.0, 1.0 );
+
+					model.setPlayerColor( 0, color );
+					render();
+				}
+
+				function updateColorPlayer2( value ) {
+
+					value = (value < 1) ? value : 0.999;	// clamp
+
+					var color = new THREE.Color();
+					color.setHSV( value, 1.0, 1.0 );
+
+					model.setPlayerColor( 1, color );
+					render();
+				}
+
+				function updateCourtOpacity( value ) {
+
+					layer3DGL.setCourtOpacity( value * 0.2 );
+					render();
+				}
+
+				function updateParticlesOpacity( value ) {
+
+					layer3DGL.setParticleOpacity( value * 0.7 );
+					render();
+				}
+
+				function updateTrajectoriesOpacity( value ) {
+
+					layer3DGL.setLineOpacity( value );
+					render();
+				}
+
+				function updateHeatmapThreshold( value ) {
+
+					layer3DGL.setHeatMapThreshold( value );
+					render();
+				}
+
+				function updateCameraZoom( value ) {
+
+					value = 1 - value;		// invertir
+					value = 5 + 20 * value; // mapear [0..1] -> [5..25];
+					
+					cameraHover.distance = value;
+
+				}
+
+			}
+
+			// ---------------
+			// video player
+			// ---------------
+
+			// init video player
+			function loadPlayerAPI() {
+
+				// This code loads the IFrame Player API code asynchronously.
+				var tag = document.createElement('script');
+
+				// This is a protocol-relative URL as described here: http://paulirish.com/2010/the-protocol-relative-url/
+				tag.src = "//www.youtube.com/iframe_api";
+				var firstScriptTag = document.getElementsByTagName('script')[0];
+				firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			}
+
+			function onYouTubeIframeAPIReady() {
+				
+				// activate interactive layer only when youtube api is ready
+				layer3DInteractive.on( 'spotClick', function( spot ) {
+
+					//
+					model.selectHotspot( spot );
+					render();
+
+					// update video tooltips
+					var	pointNode = spot.arcNode.parent,	
+						gameNode  = pointNode.parent,
+						setNode   = gameNode.parent,
+						$lis      = $( '#player-wrap li' );					
+					$lis.eq( 0 ).html( APP.ordinals[ setNode.getIndex() ] + ' SET' );
+					$lis.eq( 1 ).html( APP.ordinals[ gameNode.getIndex() ] + ' GAME' );
+					$lis.eq( 2 ).html( APP.ordinals[ pointNode.getIndex() ] + ' POINT' );
+
+					// animate camera
+					// reset camera angles (para que target y current estén en el mismo rango)
+					var currentPos = cartesianToSpherical( cameraHover.camera.position );					
+					cameraHover.distance = currentPos.distance;
+					cameraHover.tiltAngle = currentPos.tilt;
+					cameraHover.panAngle = currentPos.pan;	
+					cameraHover.update(true);	// jump to !
+					
+					// hover to new angles
+					var target = cartesianToSpherical( spot.position );
+					cameraHover.distance = target.distance + 3;
+					cameraHover.tiltAngle = target.tilt - 0.1;
+					cameraHover.panAngle = target.pan;
+
+					// testing...
+					layer3DGL.hideHotspots();
+
+					// TODO: ojo con este timeout, abría que limpiarlo
+					setTimeout( function() {
+						
+						loadVideo( spot.youtube, spot.start, spot.end );
+						deactivateVisualisation();
+					}, 1000 );
+
+					// helper
+					// var toDegrees = 180 / Math.PI;
+					function cartesianToSpherical( vec3 ) {
+						
+						var radius = vec3.length(),
+							inclination = -Math.asin( vec3.y / radius ), 	// * toDegrees;
+							azimuth = Math.atan2( vec3.x, vec3.z ); 		// * toDegrees;
+						
+						return { 
+							distance : radius, 
+							tilt : inclination, 
+							pan : azimuth
+						};						
+					}
+				});
+
+				// create MOF video player
+ 				playerMof = new YT.Player( 'playerMof', {
+					height     : '480',
+	 				width      : '853',
+	 				videoId    : 'Bj2g95ujbQU',                    
+	 				playerVars : {
+	 					disablekb : 1,
+	 					rel       : 0,
+	 					showinfo  : 0
+	 				},
+	 				events: {
+	 					'onReady' : function( event ) {
+	 						playerMof.setPlaybackQuality( 'hd720' );
+	 						$('#playerMof-wrap').css( {
+	 							height : '480px',
+	 							width  : '853px'
+	 						});
+							
+	 					}
+	 				}
+ 				});
+			}	
+
+			// when hotspot is clicked...
+			// player must be closed and another spot selected
+			// we can NOT set a spot while a video is playing
+			function loadVideo( id, start, end ) {
+
+				// stop mesh rendering
+				renderIsActive = false;
+				cameraMouseControl.disable();	
+
+				// this has to go (we can NOT set a spot while a video is playing)
+				destroyPlayer();
+				
+				// create new player
+ 				player = new YT.Player( 'player', {
+					height     : '315',
+	 				width      : '560',
+	 				videoId    : id,                    
+	 				playerVars : {
+	 					disablekb : 1,
+	 					rel       : 0,
+	 					showinfo  : 0,
+	 					start     : end,
+	 					end       : start
+	 				},
+	 				events: {
+	 					'onReady' : onPlayerReady
+	 				}
+ 				});
+
+				var $playerIframe = $( player.getIframe() );
+				
+				// close player on click out
+				$('#sections').off( 'click', onPlayerClickOut );
+				$('#sections').on( 'click', onPlayerClickOut );
+
+				// center video
+				$( '#player-wrap' ).css( {
+					height : $playerIframe.height() + 'px',
+					width  : $playerIframe.width() + 'px',
+					visibility : 'visible'
+				});
+
+				// autoplay
+				function onPlayerReady( event ) {					
+					event.target.playVideo();
+					// stop audio
+					audio.pause();
+				}
+
+			}
+
+			function destroyPlayer() {
+
+				if ( player ) {
+
+					$( '#player-wrap' ).css( 'visibility', 'hidden');
+					player.destroy();
+					player = null;
+				}
+			}
+
+			// accounts for clicks on anything outside the player (included x button)
+			function onPlayerClickOut( event ) {
+
+				console.log($(this))
+				var $target = $(event.target);
+				
+				if ( $target.is( '#logo' )
+				|| $target.is( '#mainNav span' ) 
+				|| $target.is( '#matchNav span' ) ) {
+
+					// cameraHover.distance = 20;
+				}
+				else {
+
+					// testing...
+					layer3DGL.showHotspots();
+
+					destroyPlayer();
+					activateVisualisation();
+					cameraHover.distance = 20;			// TODO: change control to sliders['zoomSlider'].setPercent(30)			
+				}
+
+				$(this).off( 'click', onPlayerClickOut );
+			}			
+
+		</script>
+
+	</body>
+</html>

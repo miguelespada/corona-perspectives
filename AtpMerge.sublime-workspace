@@ -1,0 +1,1225 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sele",
+				"selectOverNode"
+			],
+			[
+				"bottom",
+				"bottomBar"
+			],
+			[
+				"lis",
+				"list-style-position"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"point",
+				"pointNode"
+			],
+			[
+				"pla",
+				"playerColors"
+			],
+			[
+				"color",
+				"colorValues1"
+			],
+			[
+				"playe",
+				"player1"
+			],
+			[
+				"pre",
+				"prevOverNode"
+			],
+			[
+				"setl",
+				"setLineWidth"
+			],
+			[
+				"li",
+				"linewidth"
+			],
+			[
+				"selected",
+				"selectedNode"
+			],
+			[
+				"camera",
+				"cameraZoom"
+			],
+			[
+				"slide",
+				"sliders"
+			],
+			[
+				"id",
+				"isDisabled"
+			],
+			[
+				"is",
+				"isDisabled"
+			],
+			[
+				"hide",
+				"hideTimeline"
+			],
+			[
+				"bo",
+				"bottomBar"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"visi",
+				"visible"
+			],
+			[
+				"di",
+				"disable"
+			],
+			[
+				"la",
+				"layer3DInteractive"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"mouse",
+				"onMouseout"
+			],
+			[
+				"overNode",
+				"overNodeChange"
+			],
+			[
+				"playr",
+				"player1"
+			],
+			[
+				"show",
+				"showTimeline"
+			],
+			[
+				"video",
+				"videoId"
+			],
+			[
+				"app",
+				"apply"
+			],
+			[
+				"slider",
+				"slider"
+			],
+			[
+				"pl",
+				"player2"
+			],
+			[
+				"Pn",
+				"PANEL_HEIGHT"
+			],
+			[
+				"cure",
+				"currentPanel"
+			],
+			[
+				"tar",
+				"targetPanel"
+			],
+			[
+				"curre",
+				"currentPanel"
+			],
+			[
+				"targe",
+				"targetSection"
+			],
+			[
+				"marin",
+				"margin-right"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"AkzidenzGrotes",
+				"AkzidenzGroteskCondensed"
+			],
+			[
+				"curren",
+				"currentSection"
+			],
+			[
+				"dis",
+				"distance"
+			],
+			[
+				"camer",
+				"cameraHover"
+			],
+			[
+				"selec",
+				"selectNode"
+			],
+			[
+				"mat",
+				"match"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"t",
+				"target"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"To",
+				"tooltip"
+			],
+			[
+				"u",
+				"update"
+			],
+			[
+				"on",
+				"onMousemove"
+			],
+			[
+				"sets",
+				"sets"
+			],
+			[
+				"mou",
+				"mouseenter"
+			],
+			[
+				"poi",
+				"points"
+			],
+			[
+				"poin",
+				"point"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"set",
+				"setScore"
+			],
+			[
+				"ga",
+				"gameScore"
+			],
+			[
+				"to",
+				"tooltip"
+			],
+			[
+				"obje",
+				"object3D"
+			],
+			[
+				"hot",
+				"hotspots"
+			],
+			[
+				"hots",
+				"hotspotView"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"player",
+				"player-wrap"
+			],
+			[
+				"won",
+				"wonPlayer2"
+			],
+			[
+				"game",
+				"game1"
+			],
+			[
+				"gam",
+				"gameNode"
+			],
+			[
+				"sc",
+				"score"
+			],
+			[
+				"play",
+				"player"
+			],
+			[
+				"na",
+				"name1"
+			],
+			[
+				"name",
+				"namePlayer1"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"backge",
+				"background-size"
+			],
+			[
+				"defa",
+				"DEFAULT_LOW_EDGE"
+			],
+			[
+				"Defa",
+				"DEFAULT_SCALE"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"sectio",
+				"sections"
+			],
+			[
+				"clear",
+				"clearTimeline"
+			],
+			[
+				"roo",
+				"rootNode"
+			],
+			[
+				"rot",
+				"rootNode"
+			],
+			[
+				"chi",
+				"children"
+			],
+			[
+				"match",
+				"matchId"
+			],
+			[
+				"lock",
+				"lockMenu"
+			],
+			[
+				"defaul",
+				"defaultPercent"
+			],
+			[
+				"sli",
+				"sliders"
+			],
+			[
+				"came",
+				"cameraMouseControl"
+			],
+			[
+				"Pla",
+				"Player2"
+			],
+			[
+				"Player",
+				"Player1"
+			],
+			[
+				"showtim",
+				"showTimelineWrap"
+			],
+			[
+				"rende",
+				"renderIsActive"
+			],
+			[
+				"des",
+				"destroy"
+			],
+			[
+				"ob",
+				"object3D"
+			],
+			[
+				"showMa",
+				"showMatchNavigation"
+			],
+			[
+				"scrol",
+				"scrollTop"
+			],
+			[
+				"tim",
+				"timeline"
+			],
+			[
+				"enable",
+				"enableNavigationFolding"
+			],
+			[
+				"ena",
+				"enableTimelineFolding"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"matc",
+				"matchNav"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"clic",
+				"click"
+			],
+			[
+				"border",
+				"border-left"
+			],
+			[
+				"layer",
+				"layer3DInteractive"
+			],
+			[
+				"close",
+				"closeBtn"
+			],
+			[
+				"load",
+				"loadVideo"
+			],
+			[
+				"brea",
+				"breadcrubms"
+			],
+			[
+				"get",
+				"getIndex"
+			],
+			[
+				"node",
+				"nodeIndex"
+			],
+			[
+				"DE",
+				"DEFAULT_OPACITY"
+			],
+			[
+				"mo",
+				"model"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"Zo",
+				"SliderZoom"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"bre",
+				"breadcrubms"
+			],
+			[
+				"bread",
+				"breadcrubm"
+			],
+			[
+				"update",
+				"updateBreadcrubs"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 18300,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/ViewGL.js",
+			"settings":
+			{
+				"buffer_size": 29735,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/ViewLineDashed.js",
+			"settings":
+			{
+				"buffer_size": 9158,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Model.js",
+			"settings":
+			{
+				"buffer_size": 14381,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data/fn.json",
+			"settings":
+			{
+				"buffer_size": 57747,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/BottomBar.js",
+			"settings":
+			{
+				"buffer_size": 16551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Data.js",
+			"settings":
+			{
+				"buffer_size": 3155,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Processing/Processing.sublime-build",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"r",
+				"JSLint: Run JSLint"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Add Repository"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"js",
+				"Format: Javascript"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 122.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/index.html",
+		"/Users/nestorrubiogarcia/Documents/OpenFrameworks/0071/apps/virtualRitualApps/common/calibration.yml",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/ViewInteractive.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/data/dm.json",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/data/fn.json",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/data/nd.json",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/App.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/Slider.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/Model.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/Score.js",
+		"/Users/nestorrubiogarcia/Desktop/CAMBIOS EN VELOCIDAD DE LAS DASHED LINES/ViewLineDashed.js",
+		"/Users/nestorrubiogarcia/Desktop/CAMBIOS EN VELOCIDAD DE LAS DASHED LINES/Model.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/SliderZoom.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/ViewGL.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/ViewLineDashed.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/css/style.css",
+		"/Applications/MAMP/htdocs/corona-atp-v2-merge/src/BottomBar.js",
+		"/private/var/folders/Xp/XpD3thBMFsmZ02eiPeHWO++++TI/-Tmp-/8d3968cc-67bc-4a48-8545-eceddc835058/public_html/playground/demo/atp/src/Model.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2/src/ViewGL.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2/src/Slider.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2/src/SliderZoom.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2/src/Model.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2/src/ViewInteractive.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2/src/Score.js",
+		"/Applications/MAMP/htdocs/corona-atp-v2/data/nd.json",
+		"/Applications/MAMP/htdocs/corona-atp/src/CameraMouseControl.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/Score.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/Slider.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/Tooltip.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/ViewInteractive.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/HoverControls.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/fn.json",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_DF_1.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/Data.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/ViewLineDashed.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/ViewGL.js",
+		"/Applications/MAMP/htdocs/corona-atp/making-of-borrar.jpg",
+		"/Applications/MAMP/htdocs/corona-atp/src/BottomBar.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/SliderZoom.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/dm.json",
+		"/Applications/MAMP/htdocs/corona-atp/data/nd.json",
+		"/Applications/MAMP/htdocs/corona-atp/data/dm.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/fn.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/nd.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/Timeline.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_FN_3.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_FN_2.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_FN_1.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/df.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_DM_3.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_DM_2.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_DM_1.js",
+		"/Applications/MAMP/htdocs/corona-atp/data/set_DF_2.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/SliderColor.js",
+		"/Applications/MAMP/htdocs/corona-atp/atp-app-FN.html",
+		"/Applications/MAMP/htdocs/corona-atp/atp-app-DF.html",
+		"/Applications/MAMP/htdocs/corona-atp/src/Utils.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/CameraControlsGui_old.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/CameraControlsGui.js",
+		"/Applications/MAMP/htdocs/corona-atp/slider-test-feo.html",
+		"/Applications/MAMP/htdocs/corona-atp/src/GUI.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/ControlsGL.js",
+		"/Applications/MAMP/htdocs/corona-atp/set_DF_2.js",
+		"/Applications/MAMP/htdocs/corona-atp/atp-app.html",
+		"/Applications/MAMP/htdocs/corona-atp/slider-test.html",
+		"/Applications/MAMP/htdocs/corona-atp/set_FN_1.js",
+		"/Applications/MAMP/htdocs/corona-atp/set_FN_2.js",
+		"/Applications/MAMP/htdocs/corona-atp/set_FN_3.js",
+		"/Applications/MAMP/htdocs/corona-atp/set_DM_3.js",
+		"/Applications/MAMP/htdocs/corona-atp/set_DM_2.js",
+		"/Applications/MAMP/htdocs/corona-atp/set_DM_1.js",
+		"/Applications/MAMP/htdocs/corona-atp/set01.js",
+		"/Applications/MAMP/htdocs/corona-atp/set03.js",
+		"/Applications/MAMP/htdocs/corona-atp/set12.js",
+		"/Applications/MAMP/htdocs/corona-atp/set11.js",
+		"/Applications/MAMP/htdocs/corona-atp/set02.js",
+		"/Applications/MAMP/htdocs/corona-atp/set1.js",
+		"/Applications/MAMP/htdocs/corona-atp/set2.js",
+		"/Applications/MAMP/htdocs/corona-atp/css/style.css",
+		"/Applications/MAMP/htdocs/corona-atp/metaballs-test-3.html",
+		"/Applications/MAMP/htdocs/corona-atp/lib/three.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/CameraGUI.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/ZoomControls.js",
+		"/Applications/MAMP/htdocs/corona-atp/metaballs-test.html",
+		"/Applications/MAMP/htdocs/corona-atp/metaballs-test-2.html",
+		"/Users/nestorrubiogarcia/Downloads/PhotoshopMathFP.glsl",
+		"/Users/nestorrubiogarcia/Desktop/test.pde",
+		"/Applications/MAMP/htdocs/corona-atp/shader-test.html",
+		"/Applications/MAMP/htdocs/corona-atp/ViewLineDashed.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/__ViewGL.js",
+		"/Applications/MAMP/htdocs/corona-atp/js/dat.gui.js",
+		"/Applications/MAMP/htdocs/corona-atp/php/canvas-upload.php",
+		"/Applications/MAMP/htdocs/corona-atp/src/View3D.js",
+		"/Applications/MAMP/htdocs/corona-atp/js/canvassaver.js",
+		"/Applications/MAMP/htdocs/corona-atp/php/saveme.php",
+		"/Applications/MAMP/htdocs/corona-atp/css/timeline_.css",
+		"/Applications/MAMP/htdocs/corona-atp/css/timeline.css",
+		"/Applications/MAMP/htdocs/corona-atp/src/InteractivePoint.js",
+		"/Applications/MAMP/htdocs/corona-atp/test_00.html",
+		"/Applications/MAMP/htdocs/corona-atp/CoronaATP.sublime-project",
+		"/Applications/MAMP/htdocs/mimetikxs/js/scripts.js",
+		"/Applications/MAMP/htdocs/mimetikxs/css/master.css",
+		"/Applications/MAMP/htdocs/corona-atp/src/ViewTimeline.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/Player.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/App.js",
+		"/Applications/MAMP/htdocs/corona-atp/src/Data",
+		"/Applications/MAMP/htdocs/corona-atp/src/atpTypes.js",
+		"/private/var/folders/Xp/XpD3thBMFsmZ02eiPeHWO++++TI/-Tmp-/8d3968cc-67bc-4a48-8545-eceddc835058/public_html/playground/lib/three.js",
+		"/private/var/folders/Xp/XpD3thBMFsmZ02eiPeHWO++++TI/-Tmp-/8d3968cc-67bc-4a48-8545-eceddc835058/public_html/playground/test_00.html",
+		"/Users/nestorrubiogarcia/Desktop/test_00.html",
+		"/private/var/folders/Xp/XpD3thBMFsmZ02eiPeHWO++++TI/-Tmp-/8d3968cc-67bc-4a48-8545-eceddc835058/public_html/playground/hello-three-4.html",
+		"/Users/nestorrubiogarcia/Desktop/corona atp",
+		"/private/var/folders/Xp/XpD3thBMFsmZ02eiPeHWO++++TI/-Tmp-/8d3968cc-67bc-4a48-8545-eceddc835058/public_html/playground/hello-three-3.html",
+		"/Users/nestorrubiogarcia/Desktop/hello-three-4.html",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/views/layout.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/views/viewer_template.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/config/routes.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/views/viewer.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/views/list.php",
+		"/Applications/MAMP/htdocs/mimetikxs/js/jquery.easing.1.3.js",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/views/live.php",
+		"/Users/nestorrubiogarcia/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/views/about.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/config/config.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/errors/error_404.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/errors/error_db.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/errors/error_general.php",
+		"/Applications/MAMP/htdocs/mimetikxs/mimetikxs_app/errors/error_php.php"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tooltip",
+			"tootlip",
+			"setFocus",
+			"overNodeChange",
+			"setFocus",
+			"focusChange",
+			"fire",
+			"COLOR_ACTIVE",
+			"closest",
+			"ordinals",
+			"updatetoo",
+			"hotspot = ",
+			"hotspot",
+			"player",
+			"breadcrumbs",
+			"sliders[ 'p",
+			"defaul",
+			"default co",
+			"loadv",
+			"updateCourtOpacity",
+			"loadmatch",
+			"buildsliders",
+			"index",
+			"#timeline",
+			".timeline",
+			"timeline",
+			"- SPEED",
+			"SPEED",
+			"speed",
+			"onselectedNode",
+			"speed",
+			"pointNode",
+			"camerazoom",
+			"makin",
+			"onMainNavClick",
+			"target",
+			"related",
+			"updatetoo",
+			"tooltip.remo",
+			"tooltip",
+			"onMouseover",
+			"onMouseout",
+			"service",
+			"onClick",
+			"= point",
+			"point",
+			"createArcs",
+			"isTimelineHidden",
+			"istimelinehidden",
+			"istimeli",
+			"isTimelineHidden",
+			"hidetimeline",
+			"service",
+			"updatebreadcrumb",
+			"breadcrumb",
+			"selectedHotspotChange",
+			"onSelectedHotspotChange",
+			"onSelectedNodeChange",
+			"arcLookup",
+			"selectedHotspot",
+			"selectedHotspotselectedHotspot\nselectedHotspotselectedHotspot",
+			"onSelectedHotspotChange",
+			"hotspo",
+			"onSelectedNodeChange",
+			"divs",
+			"selectedHotspotChange",
+			"spotclick",
+			"build",
+			"onModelHotspotsChange",
+			"HotspotView",
+			"onSelectedNodeChange",
+			"console.log",
+			"layer3DInteractive",
+			"viewInteractive",
+			"onMatchNavClick",
+			"onSelectedNodeChange",
+			"onHotspotsChange",
+			"hotspotview",
+			"onSelectedNodeChange",
+			"hotspot",
+			"createArcs",
+			"onSelectedHotspotChange",
+			"animate",
+			"updateHotspots",
+			"updateho",
+			"sliders",
+			"builds",
+			"loadMatch",
+			"matchNavSpans",
+			".log",
+			"log",
+			"onMatchClick",
+			"onMatchNavClick",
+			"matchNav",
+			"sliders",
+			"hotspotView",
+			"matchnav",
+			"interactive",
+			"z-index",
+			"wrapper",
+			"enablema",
+			"disablemain",
+			"disable",
+			"sections",
+			"hover",
+			"z-in",
+			"bottomBar",
+			"-40",
+			"-30",
+			"main",
+			"section",
+			"resize",
+			"sections",
+			"#sections",
+			"section",
+			"section#",
+			"enablemain",
+			"enblemain",
+			"disablemain",
+			"z-index",
+			"tooltip",
+			"ona",
+			"resize",
+			"tool",
+			"onAnimationComplete",
+			"data-controller",
+			"hideMatches",
+			"showMatches()"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"buildTimelineSliders",
+			"parseSetData",
+			"cameraHover",
+			"label",
+			"1 2 0 0,",
+			"slider",
+			"$focusDiv",
+			"dataTree",
+			"bounceView",
+			"setView",
+			"campo_opacity",
+			"infoBar",
+			"Launch",
+			"Oswald",
+			"thumb_loading.gif",
+			"http://mimetikxs.com/assets/thumb_loading.jpg",
+			"http://mimetikxs.com/assets/Screen_shot_2.jpg\"",
+			"div",
+			"Math.random",
+			"Tentacle",
+			"tentacle",
+			"tentacles",
+			"this.numNodes",
+			"kxs",
+			"angleOffset",
+			".position"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/style.css",
+					"settings":
+					{
+						"buffer_size": 18300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11984,
+								11984
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/ViewGL.js",
+					"settings":
+					{
+						"buffer_size": 29735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3308,
+								3308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/ViewLineDashed.js",
+					"settings":
+					{
+						"buffer_size": 9158,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6136,
+								6136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4463.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/Model.js",
+					"settings":
+					{
+						"buffer_size": 14381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1949,
+								2087
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1225.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "data/fn.json",
+					"settings":
+					{
+						"buffer_size": 57747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/BottomBar.js",
+					"settings":
+					{
+						"buffer_size": 16551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10200,
+								10200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7591.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/Data.js",
+					"settings":
+					{
+						"buffer_size": 3155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1057,
+								1057
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 597.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"src/Tentacle_v2.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true
+}
