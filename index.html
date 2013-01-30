@@ -27,7 +27,7 @@
 				</div>
 			</section>
 
-			<div id="logo"></div>
+			<div id="logo" ></div>
 			<div id="iconos-social">
 				<a id="fullscreen" href="#"></a>
 				<a id="soundVolume" href="#"></a>
@@ -111,7 +111,6 @@
 		<script src="src/CameraMouseControl.js"></script>
 
 		<script>
-			$(document).ready(function() {
   		 		// put all your jQuery goodness in here.
 
 			if ( ! Detector.webgl ) 
@@ -165,7 +164,6 @@
 			init();
 			onWindowResize();
 			animate();
-			 });
 			function init() {
 
 				camera = new THREE.PerspectiveCamera( 60, $(window).width() / ( $(window).height() - 25 ), 1, 100 );
