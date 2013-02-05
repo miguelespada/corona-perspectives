@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Corona Perspectives</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta property="og:description" content="Explore three of the ATP's most important matches in 3D and from any perspective. Interacting with ever set, game, and point. [ Google Chrome recommended ]" /> 
+		<meta property="og:url" content="http://www.coronaperspectives.com" />
+		<meta property="og:image" content="http://www.coronaperspectives.com/data/print-web01.jpg" />
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<style>
+
+			body{
+				visibility: inherit;	
+			}
+			
+			/*.preload{
+				font-family: 'Racing Sans One', cursive;
+			}*/
+
+			#home-text{
+				display: none;
+				position: absolute;
+				width: 100%;
+				z-index: 999;
+				background: url(home-logo-text.png) no-repeat center;
+				background-repeat: no-repeat; 
+				-moz-background-size:cover;
+				-webkit-background-size: cover; 
+				-o-background-size: cover;
+				background-size: cover;
+			}
+
+			
+
+			#intro {
+				background-color: #000;
+			}
+
+			
+
+			#preload{
+				position: absolute;
+				z-index: 9999;
+
+				display: none;
+
+				width: 51px;
+				height: 51px;
+
+				margin: 0 auto;
+
+				background: url('css/preload.gif') no-repeat;
+			}
+
+			.skip-button a{
+				position: absolute;
+				z-index: 3005;
+				bottom: 0;
+				right: 0;
+
+				display: block;
+				width: 206px;
+				height: 40px;
+
+				background: url('css/skip-button.png') no-repeat;
+			}
+
+			#sections{
+				display: none;
+			}
+
+			#home-background {
+				display: none;
+
+				position:fixed; 
+				top:-50%; 
+				left:-50%; 
+				width:200%; 
+				height:200%;
+			}
+
+			#home-video{
+				position:absolute; 
+				top:0; 
+				left:0; 
+				right:0; 
+				bottom:0; 
+				margin:auto; 
+				min-width:50%;
+				min-height:50%;
+			}
+
+
+			/* Helpers class */
+			.videoWidth { width: 100%; }
+			.videoHeight { height: 100%; }
+
+
+		</style>
+	</head>
+	<body>
+		
+		<div id="preload"> <img src="css/preload.gif" style="display:none" alt=""> </div>
+		<div id="intro">
+			<div class="skip-button"><a id="exitIntro" href="index.html"></a></div>
+			
+			<div id="home-text">
+				
+			</div>
+			<div id="home-background">
+				<video id="home-video" preload>
+					<source src="video/intro.webm" type='video/webm; codecs="vp8, vorbis"'>
+					<source src="video/intro.ogv"  type='video/ogg; codecs="theora, vorbis"'>
+					<source src="video/intro.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				</video>
+			</div>
+		</div>
+
+		<div id="sections">
+
+			<section id="matches">
+				<div id="player-wrap">
+					<div id="player"></div>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div id="closeVideo">&#215</div>
+				</div>
+			</section>
+
+			<a id="logo" href="../home/index.html"></a>
+			<div id="iconos-social">
+				<a id="fullscreen" href="#"></a>
+				<a id="soundVolume" href="#"></a>
+				<a id="twitter" target="_blank" href="http://twitter.com/share?text=Explore+three+of+the+ATP's+most+important+matches+in+3D+and+from+any+perspective.+http:%2F%2Fwww.coronaperspectives.com+%23coronaperspectives"></a>
+				<a id="facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=http:%2F%2Fwww.coronaperspectives.com"></a>
+				<a id="pinterest" target="_blank" href="http://pinterest.com/pinthis?url=http:%2F%2Fwww.coronaperspectives.com"></a>
+ 				<a id="googleplus" target="_blank" href="https://plus.google.com/share?url=http:%2F%2Fwww.coronaperspectives.com"></a>
+ 			</div>
+
+			<div id="makingof">
+				<div>
+					<h1>MAKING OF</h1>
+					<p>Corona Perspective is the result of a project that was in the making for an entire year that all started with an idea from JWT. Espada y Santa Cruz was responsible for the technical part of the project, implementing new technologies such as WEBGL, HTML5, and 3D rendering in real-time.</p>
+					<p>It’s an experimental project that’s not only a very useful interactive tool for fans, players and trainers, but, above all, a tribute to tennis.</p>
+				</div>
+				<div>
+					<div id="playerMof-wrap"><div id="playerMof"></div></div>
+				</div>
+			</div>	
+
+			<div id="about">
+				<div>
+					<h1>ABOUT</h1>
+					<p>Tennis.</p>
+					<p>It’s given us matches that have touched us like great works of art.</p>
+					<p>No matter if it’s being watched on the couch, or from the stands.</p>
+					<p>But, what if it could be seen from any point of view? Even from the inside of the match? Corona Extra, ATP sponsor, has made this happen.</p>
+					<p>From a JWT’s idea, software was developed by espadaysantacruz studio, which tracked the tennis ball’s trajectory of three of the most important ATP final matches. It allows the viewer to appreciate the match from never before seen perspectives.</p>
+					<p>A 360º and three-dimensional view of matches, interacting with each service, point or rally.</p>
+					<p>An astonishing tribute to tennis.</p>
+				</div>
+				<div id="steps">
+					<div id="steps1">
+						<h1>STEP 1</h1>
+						<img src="images/paso-1.png">
+					</div>
+					<div id="steps2">
+						<h1>STEP 2</h1>
+						<img src="images/paso-2.png">
+					</div>
+					<div id="steps3">
+						<h1>STEP 3</h1>
+						<img src="images/paso-3.png">
+					</div>
+					<div id="steps4">
+						<h1>STEP 4</h1>
+						<img src="images/paso-4.png" usemap="#imagemap">
+						<map name="imagemap" id="imagemap">
+							<area shape="rect" coords="33,268,113,377" href="images/print-web01.jpg">
+							<area shape="rect" coords="126,268,205,377" href="images/print-web02.jpg">
+							<area shape="rect" coords="221,268,298,377" href="images/print-web03.jpg">
+						</map>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+
+		<script>
+			var preload = document.getElementById('preload');
+			//console.log(window.innerHeight/2-preload.style.height/2);
+
+			onWindowResize1();
+
+			// resize event
+			window.addEventListener( 'resize', onWindowResize1, false );
+			function onWindowResize1( event ) {
+				preload.style.top = window.innerHeight/2-25+'px';
+				preload.style.left = window.innerWidth/2-25+'px';
+			}
+
+		
+		</script>
+
+		<script src="lib/jquery-1.8.0.min.js"></script>
+		<script src="lib/jquery.easing.1.3.js"></script>
+		<script src="lib/jquery.transform-0.9.4.min.js"></script>
+		<script src="lib/jquery.fullscreen-min.js"></script>
+		<script src="lib/three.js"></script>
+		<script src='lib/Tween.js'></script>
+
+		<!-- <script src='js/tween.js'></script> -->
+		<script src="js/Detector.js"></script>
+		<script src="js/Stats.js"></script>
+		<script src="js/dat.gui.js"></script>
+
+		<script src="src/App.js"></script>
+		<script src="src/Utils.js"></script>
+		<script src="src/Data.js"></script>
+		<script src="src/Model.js"></script>
+		<script src="src/SliderZoom.js"></script>
+		<script src="src/Slider.js"></script>
+		<script src="src/BottomBar.js"></script>
+		<script src="src/Score.js"></script>
+		<script src="src/ViewGL.js"></script>		
+		<script src="src/ViewLineDashed.js"></script>		
+		<script src="src/ViewInteractive.js"></script>
+		<script src="src/HoverControls.js"></script>
+		<script src="src/CameraMouseControl.js"></script>
+		<script src="src/Home.js"></script>
+
+		<script>
+  			var home;
+
+			// init preload & home
+			$(preload).fadeIn('slow');
+			$(window).one('load', function(e){
+				$(preload).fadeOut(500, function(){
+					home = new APP.Home();
+				});
+			});
+
+		</script>
+
+	</body>
+</html>

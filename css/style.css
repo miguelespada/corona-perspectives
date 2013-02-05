@@ -1,3 +1,18 @@
+
+
+		.skip-button a{
+				position: absolute;
+				z-index: 3005;
+				bottom: 0;
+				right: 0;
+
+				display: block;
+				width: 206px;
+				height: 40px;
+
+				background: url('skip-button.png') no-repeat;
+			}
+
 @font-face {
 	font-family: 'AkzidenzGroteskCondensed';
 	font-weight: normal;
@@ -31,13 +46,13 @@ body {
 	margin: 0px;
 	padding: 0px;
 	border-width: 0px;	
-	/*overflow: hidden;*/
+	overflow: hidden;
 	font-family: 'AkzidenzGroteskCondensed';
 	font-size: 18px;
 	visibility: hidden;	/*hide body until document is loaded*/
 	}
 
-#intro {
+#intro, #video {
 	width: 100%;
 	height: 100%;
 	top: 0;

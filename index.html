@@ -11,7 +11,16 @@
 </head>
 	<body>		
 
-		<!-- <div id="intro"><span id="exitIntro">Exit intro</span></div> -->
+		<div id="intro">
+				<div class="skip-button"><a id="exitIntro"></a></div>
+			
+				<video id="video" autoplay loop>
+					<source src="video/intro.webm" type='video/webm; codecs="vp8, vorbis"'>
+					<source src="video/intro.ogv"  type='video/ogg; codecs="theora, vorbis"'>
+					<source src="video/intro.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+				</video>
+		</div>
+
 
 		<div id="sections">
 
@@ -27,7 +36,7 @@
 				</div>
 			</section>
 
-			<a id="logo" href="../home/index.html"></a>
+			<a id="logo"></a>
 			<div id="iconos-social">
 				<a id="fullscreen" href="#"></a>
 				<a id="soundVolume" href="#"></a>
@@ -111,10 +120,13 @@
 		<script src="src/CameraMouseControl.js"></script>
 
 		<script>
+
+			// init preload & home
+			
   		 		// put all your jQuery goodness in here.
   				// Handler for .ready() called.
 
-
+  			var homeVideo = null;
 			if ( ! Detector.webgl ) 
 				Detector.addGetWebGLMessage();
 
@@ -154,14 +166,14 @@
 				VOLUME_BACKGROUND = 0.7,
 
 			// navigation state	
-				// currentLevel   = 'intro',	// intro, sections
+				 currentLevel   = 'intro',	// intro, sections
 				currentSection = null,		// matches, about, makingof
 				xhr;						// ajax request for matches, needed to abort loading
 
 			var renderIsActive = false;	// flag to avoid/allow rendering... TODO: implement onAnimationFrame?
 
 			var audio = document.createElement("audio");
-
+			var video = null;
 			// kick it out!
   			 $(document).ready(function() {
 				init();
@@ -169,7 +181,9 @@
 				animate();
 			});
 
-			function init() {
+			function init() {	
+				 homeVideo = document.getElementById("home-video"),
+
 
 				camera = new THREE.PerspectiveCamera( 60, $(window).width() / ( $(window).height() - 25 ), 1, 100 );
 				// camera.position.z = 30;
@@ -226,8 +240,8 @@
 				// navigation
 				$( 'ul#mainNav' ).on( 'click', onMainNavClick );
 				$( 'ul#matchNav' ).on( 'click', onMatchNavClick );	
-				// $('#exitIntro').on( 'click', function() { navigateToLevel( 'sections' ); } );
-				// $('#logo').on( 'click', function() { navigateToLevel( 'intro' ); } );
+				 $('#exitIntro').on( 'click', function() { navigateToLevel( 'sections' ); } );
+				 $('#logo').on( 'click', function() { navigateToLevel( 'intro' ); } );
 				// popup images
 				$('#steps4 area').on( 'click', onImageAreaClick );
 				// selecting/dragging text upwards would scroll body. avoid this.
@@ -263,7 +277,7 @@
 				// this fix an anoying problem with the sroll in chrome (it remembers the las scroll and messes it all when reloading)
 				// hay que esperar a que se cargue todo para lanzar la app				
 				$(window).load( function() {
-					// $( 'body,html' ).scrollTop( 0 );
+					 $( 'body,html' ).scrollTop( 0 );
 					$('body').css( 'visibility', 'visible' );
 
 					// sound
@@ -291,21 +305,21 @@
 					width = $(window).width();
 
 				// update sections vertical position				
-				// $('#sections').css( 'top', height );
+				 $('#sections').css( 'top', height );
 
 				// update panels second div
 				$('#makingof > div:nth-child(2)').css( 'width', width - 320 );
 				$('#about > div:nth-child(2)').css( 'width', width - 320 );
 				
-				// update scroll value
-				// switch( currentLevel ) {
-				// case 'intro':
-				// 	$( 'body,html' ).scrollTop( 0 );
-				// 	break;
-				// case 'sections':
-				// 	$( 'body,html' ).scrollTop( width );
-				// 	break;
-				// }
+				//update scroll value
+				switch( currentLevel ) {
+				case 'intro':
+					$( 'body,html' ).scrollTop( 0 );
+					break;
+				case 'sections':
+					$( 'body,html' ).scrollTop( width );
+					break;
+				}
 
 				// 3d stuff
 				camera.aspect = width / ( height - 25 );
@@ -323,11 +337,12 @@
 				$( '#mainNav .active' ).removeClass( 'active' );
 
 				switch( slug ) {
-				// case 'intro':
-				// 	navigateToLevel( slug );
-				// 	break;
+				case 'intro':
+					navigateToLevel( slug );
+					break;
 				case 'makingof':
 				case 'about':
+
 					navigateToSection( slug );
 					$( event.target ).parent().addClass( 'active' );
 					break;
@@ -351,7 +366,7 @@
 
 			}
 
-			/*function navigateToLevel( targetLevel ) {
+			function navigateToLevel( targetLevel ) {
 
 				$('#popup').remove();
 				destroyPlayer();
@@ -395,7 +410,7 @@
 				// update state
 				currentLevel = targetLevel;
 				
-			}*/
+			}
 
 			function navigateToSection( targetSection, matchId ) {
 
@@ -624,14 +639,14 @@
 			}
 
 			function activateIntro() {
-
-				// ....
-
+				if(homeVideo != null)
+					homeVideo.play();
 			}
 
 			function deactivateIntro() {
-
-				// ....
+				homeVideo = document.getElementById("video");
+				homeVideo.pause();
+				
 
 			}
 
@@ -796,9 +811,7 @@
 				sliders ['heatmap']      = heatmap;
 				sliders ['cameraZoom']   = cameraZoom;
 
-				////////////////////////////// hack
-				// Wait untill fonts are loaded and refresh sliders width
-				$(window).on('load', function() {
+			
 
 					var count = 0;	
 
@@ -813,9 +826,7 @@
 
 						count++;
 
-					}, 100 );			
-					
-				} );
+					}, 100 );	
 				//////////////////////////////
 				// ----
 				// callbacks (value is [0.0..1.0])
