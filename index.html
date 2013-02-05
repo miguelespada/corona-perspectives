@@ -125,8 +125,6 @@
 			
   		 		// put all your jQuery goodness in here.
   				// Handler for .ready() called.
-
-  			var homeVideo = null;
 			if ( ! Detector.webgl ) 
 				Detector.addGetWebGLMessage();
 
@@ -173,16 +171,15 @@
 			var renderIsActive = false;	// flag to avoid/allow rendering... TODO: implement onAnimationFrame?
 
 			var audio = document.createElement("audio");
-			var video = null;
 			// kick it out!
   			 $(document).ready(function() {
 				init();
 				onWindowResize();
 				animate();
+				initIntro();
 			});
 
 			function init() {	
-				 homeVideo = document.getElementById("home-video"),
 
 
 				camera = new THREE.PerspectiveCamera( 60, $(window).width() / ( $(window).height() - 25 ), 1, 100 );
@@ -637,6 +634,10 @@
 				if ( xhr ) xhr.abort();
 
 			}
+			function initIntro(){	 
+				homeVideo = null;
+
+			}
 
 			function activateIntro() {
 				if(homeVideo != null)
@@ -644,9 +645,9 @@
 			}
 
 			function deactivateIntro() {
-				homeVideo = document.getElementById("video");
+				if(homeVideo == null)
+					homeVideo = document.getElementById("video");
 				homeVideo.pause();
-				
 
 			}
 
